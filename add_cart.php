@@ -9,12 +9,17 @@ session_start();
     if(isset($_POST['remove_item']))
     {
         foreach($_SESSION['cart']as $key=>$value)
+        // var_dump($value);
         {
-            if($value['name']==$_POST['name'])
+            if($value['name']==$_GET['name'])
             {
                 unset($_SESSION['cart'][$key]);
                 $_SESSION['cart']=array_values($_SESSION['cart']);
-                echo "<script>window.location.href='view_cart.php'</script>";
+                
+                echo "<script>
+                alert('product removed');
+                header('location:view_cart.php');
+                </script>";
             }
         }
     }

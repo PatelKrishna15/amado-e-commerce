@@ -49,7 +49,7 @@ session_start();
                                     <td><input class="text-center" type="number" value="<?= $value['quantity']; ?>"></td>
                                     <td><form action="add_cart.php" method="post">
                                     <button name="remove_item" class="btn btn-sm btn-outline-danger">Remove</button></td>     
-                                    <input type='hidden' name='name' value='$value[name]'>
+                                    <!-- <input type='hidden' name='name' value='$value[name]'> -->
                                 </form>
                             </td>
                                 </tr>
