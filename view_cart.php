@@ -28,8 +28,7 @@ session_start();
                             <th scope="col">Product</th>
                             <th scope="col">Price</th>
                             <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-                            <th></th>
+
                         </tr>
                     </thead>
                     <tbody class="text-center">
@@ -48,10 +47,9 @@ session_start();
                                    
                                     <td><?= $value['price'] ?></td>
                                     <td><input class="text-center" type="number" value="<?= $value['quantity']; ?>"></td>
-                                    <td><?php  $value="<?= $value['total']; ?>"?></td>
                                     <td><form action="add_cart.php" method="post">
-                                    <button name="remove_item" class="btn btn-sm btn-outline-danger">Remove</button></td>
-                                    <!-- <input type="hidden" name="name"  $value<?=$value['name']?>>      -->
+                                    <button name="remove_item" class="btn btn-sm btn-outline-danger">Remove</button></td>     
+                                    <input type='hidden' name='name' value='$value[name]'>
                                 </form>
                             </td>
                                 </tr>
